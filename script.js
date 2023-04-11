@@ -12,11 +12,11 @@ var rightPressed = false;
 var leftPressed = false;
 var gameStarted = false;
 var startButton = document.getElementById("start-button");
-const audio = new Audio("sea-shanty.mp3");
+const audio = new Audio("/assets/sea-shanty.mp3");
 
 // create a new image object for the ball
 var ballImg = new Image();
-ballImg.src = "cannonball.png";
+ballImg.src = "/assets/cannonball.png";
 
 startButton.addEventListener("click", function () {
   if (!gameStarted) {
@@ -59,6 +59,11 @@ function drawPaddle() {
 }
 
 function gameOver() {
+  // check if the game over modal has already been created
+  if (document.getElementById("game-over-modal")) {
+    return;
+  }
+
   // create a new div element for the modal
   var modal = document.createElement("div");
   modal.setAttribute("id", "game-over-modal");
@@ -72,7 +77,7 @@ function gameOver() {
   restartButton.innerText = "Restart";
   restartButton.addEventListener("click", function () {
     // reload the page to restart the game
-    location.reload();
+    window.location.href = window.location.href;
   });
 
   // add the h1 and button elements to the modal
@@ -171,5 +176,3 @@ function startGame() {
 }
 
 canvas.addEventListener("click", startGame, false);
-
-
