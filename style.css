@@ -1,0 +1,73 @@
+canvas {
+  font-family: "IM Fell DW Pica SC", serif;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  background-image: url("waves-background2.png");
+  /* background-color: lightskyblue; */
+  background-repeat: repeat-x;
+  background-size: contain;
+  text-align: center;
+  border-radius: 10px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+#start-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 32px;
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #8b4513; /* pirate brown button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "IM Fell DW Pica SC", serif; /* pirate font */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(107, 109, 122);
+}
+
+h1 {
+  font-family: "IM Fell DW Pica SC", serif;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  color: goldenrod;
+}
+
+#game-over-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #game-over-modal h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  #game-over-modal button {
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
