@@ -5,7 +5,7 @@ var x = canvas.width / 2;
 var y = canvas.height - 30;
 var dx = 2;
 var dy = -2;
-var paddleHeight = 10;
+var paddleHeight = 20;
 var paddleWidth = 75;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
@@ -52,9 +52,11 @@ function drawBall() {
 
 function drawPaddle() {
   ctx.beginPath();
-  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#8B4513"; /* pirate brown paddle */
-  ctx.fill();
+  // create a new image object for the paddle
+  var paddleImg = new Image();
+  paddleImg.src = "/assets/pirate.png";
+  // use the drawImage method to draw the image onto the canvas
+  ctx.drawImage(paddleImg, paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
   ctx.closePath();
 }
 
