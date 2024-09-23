@@ -1,2 +1,2 @@
 # Angry Pirates
-HTML5 Pong game created with a quirky pirate theme.
+Vanilla HTML/CSS/JS Pong game created with a quirky pirate theme.
